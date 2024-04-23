@@ -45,9 +45,9 @@
     <section>
         <div class="container text-center">
             <div class="row">
-                <a href="./indice/turnos.html" class="col bg-success border text-white fw-bold border-secondary rounded m-1 p-4 text-decoration-none">
-                    TURNOS
-                </a>
+                <button type="button" class="btn col btn-success m-1 p-4 fw-bold" data-bs-toggle="modal" data-bs-target="#agregarTurnoModal">
+                  TURNOS
+                </button>
                 <a href="./indice/pacientes.html" class="col bg-success border text-white fw-bold border-secondary rounded m-1 p-4 text-decoration-none">
                     PACIENTES
                 </a>
@@ -60,6 +60,80 @@
             </div>
         </div>
     </section>
+
+    <section>
+      <div class="modal fade" id="agregarTurnoModal" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header navbar-verde">
+                <h5 class="modal-title" id="modal1Label">Agregar nuevo turno</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <!-- Botón para abrir Modal 2 -->
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#buscarPacientePorDNI">Buscar por DNI</button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregarTurnoPaciente">Nuevo Paciente</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Buscar por DNI -->
+        <div class="modal fade" id="buscarPacientePorDNI" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header navbar-verde">
+                <h5 class="modal-title" id="modal2Label">Buscar paciente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Ingrese DNI: </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Buscar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="agregarTurnoPaciente" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header navbar-verde">
+                <h5 class="modal-title" id="modal2Label">Nuevo paciente</h5>
+              </div>
+              <!-- Modal body -->
+              <div class="modal-body">
+                  <div class="mb-1 mt-3">
+                  <label for="agregarNombre" class="form-label">Nombre</label>
+                  <input type="email" class="form-control" id="agregarNombre" name="agregarNombre">
+                  </div>
+                  <div class="mb-1">
+                  <label for="agregarApellido" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="agregarApellido" name="agregarApellido">
+                  </div>
+                  <div class="mb-1">
+                  <label for="agregarTelefono" class="form-label">Teléfono</label>
+                  <input type="text" class="form-control" id="agregarTelefono" name="agregarTelefono">
+                  </div>
+                  <div class="mb-1">
+                  <label for="agregarTratamiento" class="form-label">Tratamiento</label>
+                  <input type="text" class="form-control" id="agregarTratamiento" name="agregarTratamiento">
+                  </div>
+                  <div class="mb-1">
+                  <label for="agregarDNI" class="form-label">DNI</label>
+                  <input type="text" class="form-control" id="agregarDNI" name="agregarDNI">
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Agregar</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal" formaction="http://192.168.1.37:5500/index.html">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
     <section>
         <div class="container mt-3 border">
             <div class="row fw-bold justify-content-center">
