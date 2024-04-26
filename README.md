@@ -1,0 +1,1 @@
+Aplicación pensada para ser usada en centro de estetica donde se puede dar turnos a pacientes, tener un seguimiento de sus tratamientos, como tambien gestionar tratamientos, su valor, descripcion, etc.
