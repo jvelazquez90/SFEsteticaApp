@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jorge Velazquez">
-    <link rel="icon" href="./img/logo.ico">
+    <link rel="icon" href="../img/logo.ico">
 
     <title>SF Estética Apps</title>
 
@@ -14,132 +14,140 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!------------------------------------ NAVBAR----------------------------------------------------------------------->
+    <!------------------------------------ NAVBAR----------------------------------------------------------------------->
   <nav class="navbar navbar-expand-lg navbar-verde sticky-top">
     <div class="container">
         <div>
             <a href="#"> <img src="../img/logo.png" alt="sfestetica-logo" width="100" height="60"></a>
         </div>
+        
         <div class="dropdown">
             <a data-bs-toggle="dropdown" aria-expanded="false" href="#">
                 <img src="../img/menu.png" alt="Bootstrap" width="30" height="24">
             </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="../index.html"> Cerrar sesión </a></li>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html"> Cerrar sesión </a></li>
             </ul>
         </div>
+        
+        <!--
+        <div class="dropdown">
+          <button class="btn btn-secondary logo-menu" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./sign-in.html">Cerrar sesión</a></li>
+          </ul>
+        </div>
+        -->
     </div>
   </nav>
 
-<main>
-  <section>
-    <!----------------------------------------------------------- MODAL ------------------------------------->
-    <!-- Button to Open the Modal -->
-    <div class="container">
-      <div class="row">
-        <button type="button" class="btn col btn-success m-1" data-bs-toggle="modal" data-bs-target="#myModal1">
-          AGREGAR TURNO
-        </button>
-        <button type="button" class="btn col btn-primary m-1" data-bs-toggle="modal" data-bs-target="#myModal2">
-          MODIFICAR TURNO
-        </button>
-        <button type="button" class="btn col btn-danger m-1" data-bs-toggle="modal" data-bs-target="#myModal3">
-          ELIMINAR TURNO
-        </button>
+  <!----------------------------------------------- MENU DE GESTION ----------------------------------------------------------------------->
+  <main>
+    <section>
+      <div class="container text-center">
+        <div class="row">
+          <button type="button" class="btn col btn-success m-1 p-4 fw-bold" data-bs-toggle="modal" data-bs-target="#agregarTurnoModal">
+            TURNOS
+          </button>
+          <a href="./indice/pacientes.html" class="col bg-success border text-white fw-bold border-secondary rounded m-1 p-4 text-decoration-none">
+              PACIENTES
+          </a>
+          <a href="./indice/tratamientos.html" class="col bg-success border text-white fw-bold border-secondary rounded m-1 p-4 text-decoration-none">
+              TRATAMIENTOS
+          </a>
+          <a href="./indice/dashboard.html" class="col bg-success border text-white fw-bold border-secondary rounded m-1 p-4 text-decoration-none">
+              DASHBOARD
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------------------------------- TURNOS --------------------------------------------------------------------->
+    <section>
+      <div class="modal fade" id="agregarTurnoModal" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header navbar-verde">
+              <h5 class="modal-title" id="modal1Label">Agregar nuevo turno</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#buscarPacientePorDNI">Buscar por DNI</button>
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregarTurnoPaciente">Nuevo Paciente</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Ventana modal 1: Buscar por DNI -->
+      <div class="modal fade" id="buscarPacientePorDNI" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header navbar-verde">
+              <h5 class="modal-title" id="modal2Label">Buscar paciente</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Ingrese DNI: </p>
+              <input type="text">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-bs-dismiss="modal">Buscar</button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="modal fade" id="myModal1">
-        <div class="modal-dialog">
+      <!-- Ventana modal 2: Nuevo paciente -->
+      <div class="modal fade" id="agregarTurnoPaciente" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
-
-            <!-- Modal Header -->
             <div class="modal-header navbar-verde">
-              <h4 class="modal-title">Agregar turno</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              <h5 class="modal-title" id="modal2Label">Nuevo paciente</h5>
             </div>
-
-            <!-- Modal body -->
             <div class="modal-body">
-              <div class="mb-1 mt-3">
-                <label for="agregarNombre" class="form-label">Nombre</label>
-                <input type="email" class="form-control" id="agregarNombre" name="agregarNombre">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col mb-1 p-1">
+                    <label for="nuevoPacienteAgregarNombre" class="form-label">Nombre</label>
+                    <input type="email" class="form-control" id="nuevoPacienteAgregarNombre" name="nuevoPacienteAgregarNombre">
+                  </div>
+                  <div class="col mb-1 p-1">
+                    <label for="nuevoPacienteAgregarApellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="nuevoPacienteAgregarApellido" name="nuevoPacienteAgregarApellido">
+                  </div>
+                </div>
               </div>
-              <div class="mb-1">
-                <label for="agregarApellido" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="agregarApellido" name="agregarApellido">
-              </div>
-              <div class="mb-1">
-                <label for="agregarTelefono" class="form-label">Teléfono</label>
-                <input type="text" class="form-control" id="agregarTelefono" name="agregarTelefono">
-              </div>
+              <!--
               <div class="mb-1">
                 <label for="agregarTratamiento" class="form-label">Tratamiento</label>
                 <input type="text" class="form-control" id="agregarTratamiento" name="agregarTratamiento">
               </div>
-              <div class="mb-1">
-                <label for="agregarDNI" class="form-label">DNI</label>
-                <input type="text" class="form-control" id="agregarDNI" name="agregarDNI">
+              -->
+              <div class="container">
+                <div class="row">
+                  <div class="col mb-1 p-1">
+                    <label for="nuevoPacienteAgregarDNI" class="form-label">DNI</label>
+                    <input type="text" class="form-control" id="nuevoPacienteAgregarDNI" name="nuevoPacienteAgregarDNI">
+                  </div>
+                  <div class="col mb-1 p-1">
+                    <label for="nuevoPacienteAgregarTelefono" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" id="nuevoPacienteAgregarTelefono" name="nuevoPacienteAgregarTelefono">
+                  </div>
+                </div>
               </div>
             </div>
-
-            <!-- Modal footer -->
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Agregar</button>
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal" formaction="../index.html">Cancelar</button>
-            </div>
-
-          </div>
-        </div>
-    </div>
-    
-
-    <!-- The Modal -->
-    
-
-      <!--  EDITAR -->
-
-    <!-- The Modal -->
-    <div class="modal fade" id="myModal2">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-          <!-- Modal Header -->
-          <div class="modal-header navbar-verde">
-            <h4 class="modal-title">Modificar turno</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-
-          <!-- Modal body -->
-          <div class="modal-body">
-            <div class="mb-1 mt-3">
-              <label for="ModificarNombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="modificarNombre" name="modificarNombre">
-            </div>
-            <div class="mb-1">
-              <label for="modificarApellido" class="form-label">Apellido</label>
-              <input type="text" class="form-control" id="modificarApellido" name="modificarApellido">
-            </div>
-            <div class="mb-1">
-              <label for="modificarTelefono" class="form-label">Teléfono</label>
-              <input type="text" class="form-control" id="modificarTelefono" name="modificarTelefono">
-            </div>
-            <div class="mb-1">
-              <label for="modificarTratamiento" class="form-label">Tratamiento</label>
-              <input type="text" class="form-control" id="modificarTratamiento" name="modificarTratamiento">
-            </div>
-            <div class="mb-3">
-              <label for="modificarDNI" class="form-label">DNI</label>
-              <input type="text" class="form-control" id="modificarDNI" name="modificarDNI">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Agregar</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" formaction="./index.html">Cancelar</button>
             </div>
           </div>
-
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Agregar</button>
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" formaction="../index.html">Cancelar</button>
-
         </div>
       </div>
-</div>
-</section>
-</main>
+    </section>
+  </main>
+
+</body>
+</html>
