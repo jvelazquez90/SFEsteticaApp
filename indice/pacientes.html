@@ -1,11 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jorge Velazquez">
+  <link rel="icon" href="./img/logo.ico">
+
+  <title>SF Estética Apps</title>
+
+  <link rel="stylesheet" href="../css/estilo.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!------------------------------------------------------ NAVBAR ----------------------------------------------------------------------->
+  <nav class="navbar navbar-expand-lg navbar-verde sticky-top">
+    <div class="container">
+      <div>
+          <a href="#"> <img src="../img/logo.png" alt="sfestetica-logo" width="100" height="60"></a>
+      </div>
+      <a class="btn btn-outline-danger" href="../index.html"> 
+        <img src="../img/salida-de-emergencia.png" alt="salir" width="16" height="14">
+          Salir
+      </a>
+    </div>
+  </nav>
+
+  <!-------------------------------------------------------- MENU ----------------------------------------------------------------------->
+  <div class="container">
+    <button type="button" class="btn col btn-success m-1 fw-bold" data-bs-toggle="modal" data-bs-target="#agregarTratamientoModal">
+      Agregar paciente
+    </button>
+    <button type="button" class="btn col btn-success m-1 fw-bold" data-bs-toggle="modal" data-bs-target="#buscarTratamientoModal">
+      Buscar paciente
+    </button>
+  </div>
+
+  <!-------------------------------------------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------- AGREGAR PACIENTE ------------------------------------------------------->
+    <section>
+      <!-- Agregar -->
+      <div class="modal fade" id="agregarTratamientoModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header navbar-verde">
+              <h4 class="modal-title">Agregar paciente</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                      <div class="col mb-1 p-1">
+                        <label for="nuevoPacienteAgregarNombre" class="form-label">Nombre</label>
+                        <input type="email" class="form-control" id="nuevoPacienteAgregarNombre" name="nuevoPacienteAgregarNombre">
+                      </div>
+                      <div class="col mb-1 p-1">
+                        <label for="nuevoPacienteAgregarApellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="nuevoPacienteAgregarApellido" name="nuevoPacienteAgregarApellido">
+                      </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                      <div class="col mb-1 p-1">
+                        <label for="nuevoPacienteAgregarDNI" class="form-label">DNI</label>
+                        <input type="text" class="form-control" id="nuevoPacienteAgregarDNI" name="nuevoPacienteAgregarDNI">
+                      </div>
+                      <div class="col mb-1 p-1">
+                        <label for="nuevoPacienteAgregarTelefono" class="form-label">Teléfono</label>
+                        <input type="number" class="form-control" id="nuevoPacienteAgregarTelefono" name="nuevoPacienteAgregarTelefono">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-bs-dismiss="modal">Agregar</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Buscar -->
+      <div class="modal fade" id="buscarTratamientoModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header navbar-verde">
+              <h4 class="modal-title">Buscar paciente</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <p>Ingrese DNI: </p>
+              <input type="text">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-bs-dismiss="modal">Buscar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!---------------------------------------------------------------------------------------------------------------------------------------->
+  <!--------------------------------------------------------- AGENDA DEL DIA --------------------------------------------------------------->
+
+  <section>
+    <div class="container mt-3 border">
+      <div class="row fw-bold justify-content-center">
+        LISTADO DE PACIENTES
+      </div>
+    </div>
+    <div class="container p-0">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>DNI</th>
+            <th>Teléfono</th>
+            <th>Sexo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Maria Laura</td>
+            <td>35184756</td>
+            <td>1156475010</td>
+            <td>F</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Juan Carlos</td>
+            <td>37456875</td>
+            <td>1132786523</td>
+            <td>M</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Nadia Soledad</td>
+            <td>40567856</td>
+            <td>1156478532</td>
+            <td>F</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>Nicolas Alejandro</td>
+            <td>21456321</td>
+            <td>1145652574</td>
+            <td>M</td>
+          </tr>
+          <tr>
+            <th>5</th>
+            <td>Matias Emanuel</td>
+            <td>25432854</td>
+            <td>1145256895</td>
+            <td>M</td>
+          </tr>
+          <tr>
+            <th>6</th>
+            <td>Daiana Belen</td>
+            <td>45002532</td>
+            <td>1145756214</td>
+            <td>F</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
     
 </body>
 </html>
