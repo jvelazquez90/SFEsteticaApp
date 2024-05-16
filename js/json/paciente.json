@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "nombre": "Maria Laura",
+    "dni": "35184756",
+    "telefono": "1156475010",
+    "sexo": "F"
+  },
+  {
+    "id": "2",
+    "nombre": "Juan Carlos",
+    "dni": "37456875",
+    "telefono": "1132786523",
+    "sexo": "M"
+  },
+  {
+    "id": "3",
+    "nombre": "Nadia Soledad",
+    "dni": "40567856",
+    "telefono": "1156478532",
+    "sexo": "F"
+  },
+  {
+    "id": "4",
+    "nombre": "Nicolas Alejandro",
+    "dni": "21456321",
+    "telefono": "1145652574",
+    "sexo": "M"
+  },
+  {
+    "id": "5",
+    "nombre": "Matias Emanuel",
+    "dni": "25432854",
+    "telefono": "1145256895",
+    "sexo": "M"
+  },
+  {
+    "id": "6",
+    "nombre": "Daiana Belen",
+    "dni": "45002532",
+    "telefono": "1145756214",
+    "sexo": "F"
+  }
+]

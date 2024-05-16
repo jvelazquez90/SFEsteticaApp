@@ -1,0 +1,17 @@
+[
+  {
+    "horario": "9:00",
+    "paciente": "Jorge Velazquez",
+    "tratamiento": "peelin"
+  },
+  {
+    "horario": "10:30",
+    "paciente": "John",
+    "tratamiento": "mascara facial"
+  },
+  {
+    "horario": "12:30",
+    "paciente": "Dooley",
+    "tratamiento": "puntas de diamante"
+  }
+]
