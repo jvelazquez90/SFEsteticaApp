@@ -29,135 +29,137 @@
 
   <!--------------------------------------------------------------------------------------------------------------------------------------->
   <!----------------------------------------------- MENU DE GESTION ----------------------------------------------------------------------->
-  <main>
-    <section>
-      <div class="container text-center">
-        <div class="row">
-          <button type="button" class="btn col btn-success m-1 p-4 fw-bold" data-bs-toggle="modal" data-bs-target="#agregarTurnoModal">
-            TURNOS
-          </button>
-          <a href="./indice/pacientes.html" class="col bg-success border text-white fw-bold border-secondary rounded m-1 p-4 text-decoration-none">
-              PACIENTES
-          </a>
-          <a href="./indice/tratamientos.html" class="col bg-success border text-white fw-bold border-secondary rounded m-1 p-4 text-decoration-none">
-              TRATAMIENTOS
-          </a>
-          <a href="./indice/dashboard.html" class="col bg-success border text-white fw-bold border-secondary rounded m-1 p-4 text-decoration-none">
-              DASHBOARD
-          </a>
+  <main class="imagen-fondo">
+    <div>
+      <section>
+        <div class="container text-center">
+          <div class="row">
+            <button type="button" class="btn col btn-success m-1 p-4 fw-bold" data-bs-toggle="modal" data-bs-target="#agregarTurnoModal">
+              TURNOS
+            </button>
+            <a href="./indice/pacientes.html" class="col bg-success border text-white fw-bold border-secondary rounded m-1 p-4 text-decoration-none">
+                PACIENTES
+            </a>
+            <a href="./indice/tratamientos.html" class="col bg-success border text-white fw-bold border-secondary rounded m-1 p-4 text-decoration-none">
+                TRATAMIENTOS
+            </a>
+            <a href="./indice/dashboard.html" class="col bg-success border text-white fw-bold border-secondary rounded m-1 p-4 text-decoration-none">
+                DASHBOARD
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <!-------------------------------------------------------------------------------------------------------------------------------------->
-    <!--------------------------------------------------------- TURNOS --------------------------------------------------------------------->
-    <section>
-      <div class="modal fade" id="agregarTurnoModal" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header navbar-verde">
-              <h5 class="modal-title" id="modal1Label">Agregar nuevo turno</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center">
-              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#buscarPacientePorNombre">Buscar por nombre</button>
-              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregarTurnoPaciente">Nuevo Paciente</button>
+      </section>
+  
+      <!-------------------------------------------------------------------------------------------------------------------------------------->
+      <!--------------------------------------------------------- TURNOS --------------------------------------------------------------------->
+      <section>
+        <div class="modal fade" id="agregarTurnoModal" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header navbar-verde">
+                <h5 class="modal-title" id="modal1Label">Agregar nuevo turno</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#buscarPacientePorNombre">Buscar por nombre</button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregarTurnoPaciente">Nuevo Paciente</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    
-      <!-- Ventana modal 1: Buscar por nombre -->
-      <div class="modal fade" id="buscarPacientePorNombre" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header navbar-verde">
-              <h5 class="modal-title" id="modal2Label">Buscar paciente</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Ingrese nombre: </p>
-              <input type="text">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-success" data-bs-dismiss="modal">Buscar</button>
+      
+        <!-- Ventana modal 1: Buscar por nombre -->
+        <div class="modal fade" id="buscarPacientePorNombre" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header navbar-verde">
+                <h5 class="modal-title" id="modal2Label">Buscar paciente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Ingrese nombre: </p>
+                <input type="text">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Buscar</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Ventana modal 2: Nuevo paciente -->
-      <div class="modal fade" id="agregarTurnoPaciente" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header navbar-verde">
-              <h5 class="modal-title" id="modal2Label">Nuevo paciente</h5>
-            </div>
-            <div class="modal-body">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col mb-1 p-1">
-                    <label for="nuevoPacienteAgregarNombre" class="form-label">Nombre</label>
-                    <input type="email" class="form-control" id="nuevoPacienteAgregarNombre" name="nuevoPacienteAgregarNombre">
+  
+        <!-- Ventana modal 2: Nuevo paciente -->
+        <div class="modal fade" id="agregarTurnoPaciente" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header navbar-verde">
+                <h5 class="modal-title" id="modal2Label">Nuevo paciente</h5>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col mb-1 p-1">
+                      <label for="nuevoPacienteAgregarNombre" class="form-label">Nombre</label>
+                      <input type="email" class="form-control" id="nuevoPacienteAgregarNombre" name="nuevoPacienteAgregarNombre">
+                    </div>
+                    <div class="col mb-1 p-1">
+                      <label for="nuevoPacienteAgregarApellido" class="form-label">Apellido</label>
+                      <input type="text" class="form-control" id="nuevoPacienteAgregarApellido" name="nuevoPacienteAgregarApellido">
+                    </div>
                   </div>
-                  <div class="col mb-1 p-1">
-                    <label for="nuevoPacienteAgregarApellido" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="nuevoPacienteAgregarApellido" name="nuevoPacienteAgregarApellido">
+                </div>
+                <!--
+                <div class="mb-1">
+                  <label for="agregarTratamiento" class="form-label">Tratamiento</label>
+                  <input type="text" class="form-control" id="agregarTratamiento" name="agregarTratamiento">
+                </div>
+                -->
+                <div class="container">
+                  <div class="row">
+                    <div class="col mb-1 p-1">
+                      <label for="nuevoPacienteAgregarDNI" class="form-label">DNI</label>
+                      <input type="text" class="form-control" id="nuevoPacienteAgregarDNI" name="nuevoPacienteAgregarDNI">
+                    </div>
+                    <div class="col mb-1 p-1">
+                      <label for="nuevoPacienteAgregarTelefono" class="form-label">Teléfono</label>
+                      <input type="number" class="form-control" id="nuevoPacienteAgregarTelefono" name="nuevoPacienteAgregarTelefono">
+                    </div>
                   </div>
                 </div>
               </div>
-              <!--
-              <div class="mb-1">
-                <label for="agregarTratamiento" class="form-label">Tratamiento</label>
-                <input type="text" class="form-control" id="agregarTratamiento" name="agregarTratamiento">
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Agregar</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal" formaction="./index.html">Cancelar</button>
               </div>
-              -->
-              <div class="container">
-                <div class="row">
-                  <div class="col mb-1 p-1">
-                    <label for="nuevoPacienteAgregarDNI" class="form-label">DNI</label>
-                    <input type="text" class="form-control" id="nuevoPacienteAgregarDNI" name="nuevoPacienteAgregarDNI">
-                  </div>
-                  <div class="col mb-1 p-1">
-                    <label for="nuevoPacienteAgregarTelefono" class="form-label">Teléfono</label>
-                    <input type="number" class="form-control" id="nuevoPacienteAgregarTelefono" name="nuevoPacienteAgregarTelefono">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Agregar</button>
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" formaction="./index.html">Cancelar</button>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!---------------------------------------------------------------------------------------------------------------------------------------->
-    <!--------------------------------------------------------- AGENDA DEL DIA --------------------------------------------------------------->
-
-    <section>
-      <div class="container mt-3 border">
-        <div class="row fw-bold justify-content-center">
-            AGENDA DEL DIA
+      </section>
+  
+      <!---------------------------------------------------------------------------------------------------------------------------------------->
+      <!--------------------------------------------------------- AGENDA DEL DIA --------------------------------------------------------------->
+  
+      <section>
+        <div class="container mt-3 mb-3">
+          <div class="row fw-bold justify-content-center">
+              AGENDA DEL DIA
+          </div>
         </div>
-      </div>
-      <div class="container">
-        <table class="table table-hover text-center" id="agendaDelDia">
-          <thead>
-            <tr>
-              <th>Horario</th>
-              <th>Paciente</th>
-              <th>Tratamiento</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- se completa con API -->
-          </tbody>
-          </table>
-      </div>
-    </section>
+        <div class="container">
+          <table class="table table-hover text-center" id="agendaDelDia">
+            <thead>
+              <tr>
+                <th>Horario</th>
+                <th>Paciente</th>
+                <th>Tratamiento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- se completa con API -->
+            </tbody>
+            </table>
+        </div>
+      </section>
+    </div>
   </main>
 
   <script src="./js/api.js"></script>

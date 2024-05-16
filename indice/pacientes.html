@@ -14,118 +14,122 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!------------------------------------------------------ NAVBAR ----------------------------------------------------------------------->
-  <nav class="navbar navbar-expand-lg navbar-verde sticky-top">
-    <div class="container">
-      <div>
-          <a href="#"> <img src="../img/logo.png" alt="sfestetica-logo" width="100" height="60"></a>
+  <div class="imagen-fondo">
+    <!------------------------------------------------------ NAVBAR ----------------------------------------------------------------------->
+    <nav class="navbar navbar-expand-lg navbar-verde sticky-top">
+      <div class="container">
+        <div>
+            <a href="#"> <img src="../img/logo.png" alt="sfestetica-logo" width="100" height="60"></a>
+        </div>
+        <a class="btn btn-outline-danger" href="../index.html"> 
+          <img src="../img/salida-de-emergencia.png" alt="salir" width="16" height="14">
+            Salir
+        </a>
       </div>
-      <a class="btn btn-outline-danger" href="../index.html"> 
-        <img src="../img/salida-de-emergencia.png" alt="salir" width="16" height="14">
-          Salir
-      </a>
-    </div>
-  </nav>
+    </nav>
 
-  <!-------------------------------------------------------- MENU ----------------------------------------------------------------------->
-  <div class="container">
-    <button type="button" class="btn col btn-success m-1 fw-bold" data-bs-toggle="modal" data-bs-target="#agregarTratamientoModal">
-      Agregar paciente
-    </button>
-    <button type="button" class="btn col btn-success m-1 fw-bold" data-bs-toggle="modal" data-bs-target="#buscarTratamientoModal">
-      Buscar paciente
-    </button>
-  </div>
+    <main>
+      <!-------------------------------------------------------- MENU ----------------------------------------------------------------------->
+      <div class="container">
+        <button type="button" class="btn col btn-success m-1 fw-bold" data-bs-toggle="modal" data-bs-target="#agregarTratamientoModal">
+          Agregar paciente
+        </button>
+        <button type="button" class="btn col btn-success m-1 fw-bold" data-bs-toggle="modal" data-bs-target="#buscarTratamientoModal">
+          Buscar paciente
+        </button>
+      </div>
 
-  <!-------------------------------------------------------------------------------------------------------------------------------------->
-  <!--------------------------------------------------------- AGREGAR PACIENTE ------------------------------------------------------->
-    <section>
-      <!-- Agregar -->
-      <div class="modal fade" id="agregarTratamientoModal">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header navbar-verde">
-              <h4 class="modal-title">Agregar paciente</h4>
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <div class="row">
-                      <div class="col mb-1 p-1">
-                        <label for="nuevoPacienteAgregarNombre" class="form-label">Nombre</label>
-                        <input type="email" class="form-control" id="nuevoPacienteAgregarNombre" name="nuevoPacienteAgregarNombre">
-                      </div>
-                      <div class="col mb-1 p-1">
-                        <label for="nuevoPacienteAgregarApellido" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="nuevoPacienteAgregarApellido" name="nuevoPacienteAgregarApellido">
-                      </div>
-                    </div>
+      <!-------------------------------------------------------------------------------------------------------------------------------------->
+      <!--------------------------------------------------------- AGREGAR PACIENTE ------------------------------------------------------->
+        <section>
+          <!-- Agregar -->
+          <div class="modal fade" id="agregarTratamientoModal">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header navbar-verde">
+                  <h4 class="modal-title">Agregar paciente</h4>
                 </div>
-                <div class="container">
-                    <div class="row">
-                      <div class="col mb-1 p-1">
-                        <label for="nuevoPacienteAgregarDNI" class="form-label">DNI</label>
-                        <input type="text" class="form-control" id="nuevoPacienteAgregarDNI" name="nuevoPacienteAgregarDNI">
-                      </div>
-                      <div class="col mb-1 p-1">
-                        <label for="nuevoPacienteAgregarTelefono" class="form-label">Teléfono</label>
-                        <input type="number" class="form-control" id="nuevoPacienteAgregarTelefono" name="nuevoPacienteAgregarTelefono">
-                      </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                          <div class="col mb-1 p-1">
+                            <label for="nuevoPacienteAgregarNombre" class="form-label">Nombre</label>
+                            <input type="email" class="form-control" id="nuevoPacienteAgregarNombre" name="nuevoPacienteAgregarNombre">
+                          </div>
+                          <div class="col mb-1 p-1">
+                            <label for="nuevoPacienteAgregarApellido" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="nuevoPacienteAgregarApellido" name="nuevoPacienteAgregarApellido">
+                          </div>
+                        </div>
                     </div>
-                  </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-success" data-bs-dismiss="modal">Agregar</button>
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Buscar -->
-      <div class="modal fade" id="buscarTratamientoModal">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header navbar-verde">
-              <h4 class="modal-title">Buscar paciente</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-              <p>Ingrese Nombre: </p>
-              <input type="text">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-success" data-bs-dismiss="modal">Buscar</button>
+                    <div class="container">
+                        <div class="row">
+                          <div class="col mb-1 p-1">
+                            <label for="nuevoPacienteAgregarDNI" class="form-label">DNI</label>
+                            <input type="text" class="form-control" id="nuevoPacienteAgregarDNI" name="nuevoPacienteAgregarDNI">
+                          </div>
+                          <div class="col mb-1 p-1">
+                            <label for="nuevoPacienteAgregarTelefono" class="form-label">Teléfono</label>
+                            <input type="number" class="form-control" id="nuevoPacienteAgregarTelefono" name="nuevoPacienteAgregarTelefono">
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Agregar</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- Buscar -->
+          <div class="modal fade" id="buscarTratamientoModal">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header navbar-verde">
+                  <h4 class="modal-title">Buscar paciente</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Ingrese Nombre: </p>
+                  <input type="text">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Buscar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <!---------------------------------------------------------------------------------------------------------------------------------------->
+      <!--------------------------------------------------------- AGENDA DEL DIA --------------------------------------------------------------->
+
+      <section>
+        <div class="container mt-3 mb-3">
+          <div class="row fw-bold justify-content-center">
+            LISTADO DE PACIENTES
+          </div>
         </div>
-      </div>
-    </section>
-
-  <!---------------------------------------------------------------------------------------------------------------------------------------->
-  <!--------------------------------------------------------- AGENDA DEL DIA --------------------------------------------------------------->
-
-  <section>
-    <div class="container mt-3 border">
-      <div class="row fw-bold justify-content-center">
-        LISTADO DE PACIENTES
-      </div>
-    </div>
-    <div class="container p-0">
-      <table class="table table-hover text-center" id="listaPaciente">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Nombre</th>
-            <th>DNI</th>
-            <th>Teléfono</th>
-            <th>Sexo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- llamada a la API-->
-        </tbody>
-      </table>
-    </div>
-  </section>
+        <div class="container p-0">
+          <table class="table table-hover text-center" id="listaPaciente">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>DNI</th>
+                <th>Teléfono</th>
+                <th>Sexo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- llamada a la API-->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
 
   <script src="../js/APIpaciente.js"></script>
     

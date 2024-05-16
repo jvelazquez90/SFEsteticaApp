@@ -1,3 +1,24 @@
 .navbar-verde {
     background-color: #BDE9CE;
 }
+
+.imagen-fondo {
+    background-image: url('../img/sfestetica-lugar2.jpg');
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+    /*
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    */
+}
