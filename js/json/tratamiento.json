@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "nombre": "Peelin",
+    "duracion": "30m",
+    "sesiones": "4",
+    "precio": "12000"
+  },
+  {
+    "id": "2",
+    "nombre": "Mascara facial",
+    "duracion": "30m",
+    "sesiones": "1",
+    "precio": "7500"
+  },
+  {
+    "id": "3",
+    "nombre": "Puntas de diamante",
+    "duracion": "45m",
+    "sesiones": "6",
+    "precio": "25000"
+  },
+  {
+    "id": "4",
+    "nombre": "Peelin",
+    "duracion": "30m",
+    "sesiones": "4",
+    "precio": "12000"
+  },
+  {
+    "id": "5",
+    "nombre": "Mascara facial",
+    "duracion": "30m",
+    "sesiones": "1",
+    "precio": "7500"
+  },
+  {
+    "id": "6",
+    "nombre": "Puntas de diamante",
+    "duracion": "45m",
+    "sesiones": "6",
+    "precio": "25000"
+  }
+]

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Jorge Velazquez">
-  <link rel="icon" href="./img/logo.ico">
+  <link rel="icon" href="../img/logo.ico">
 
   <title>SF Estética Apps</title>
 
@@ -89,7 +89,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-              <p>Ingrese DNI: </p>
+              <p>Ingrese Nombre: </p>
               <input type="text">
             </div>
             <div class="modal-footer">
@@ -110,7 +110,7 @@
       </div>
     </div>
     <div class="container p-0">
-      <table class="table text-center">
+      <table class="table table-hover text-center" id="listaPaciente">
         <thead>
           <tr>
             <th>Id</th>
@@ -121,52 +121,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th>1</th>
-            <td>Maria Laura</td>
-            <td>35184756</td>
-            <td>1156475010</td>
-            <td>F</td>
-          </tr>
-          <tr>
-            <th>2</th>
-            <td>Juan Carlos</td>
-            <td>37456875</td>
-            <td>1132786523</td>
-            <td>M</td>
-          </tr>
-          <tr>
-            <th>3</th>
-            <td>Nadia Soledad</td>
-            <td>40567856</td>
-            <td>1156478532</td>
-            <td>F</td>
-          </tr>
-          <tr>
-            <th>4</th>
-            <td>Nicolas Alejandro</td>
-            <td>21456321</td>
-            <td>1145652574</td>
-            <td>M</td>
-          </tr>
-          <tr>
-            <th>5</th>
-            <td>Matias Emanuel</td>
-            <td>25432854</td>
-            <td>1145256895</td>
-            <td>M</td>
-          </tr>
-          <tr>
-            <th>6</th>
-            <td>Daiana Belen</td>
-            <td>45002532</td>
-            <td>1145756214</td>
-            <td>F</td>
-          </tr>
+          <!-- llamada a la API-->
         </tbody>
       </table>
     </div>
   </section>
+
+  <script src="../js/APIpaciente.js"></script>
     
 </body>
 </html>
