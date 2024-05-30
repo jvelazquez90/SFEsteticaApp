@@ -1,0 +1,6 @@
+{
+  "usuarios": [
+    {"usuario": "sf", "contrasena": "sf24"},
+    {"usuario": "invitado", "contrasena": "invitado"}
+  ]
+}
