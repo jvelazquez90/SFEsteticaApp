@@ -22,3 +22,12 @@
     position: relative;
     */
 }
+
+.filtro-eliminar {
+    width: 25px;
+    height: 25px;
+}
+
+.boton-filtro-eliminar {
+    display: none;
+}
