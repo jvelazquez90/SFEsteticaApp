@@ -35,7 +35,6 @@ buscarPacienteModal.addEventListener('click', function buscarPaciente() {
     .then(data => {
 
       const nombrePacienteBuscar = document.getElementById('nombrePacienteBuscar')
-      console.log(nombrePacienteBuscar);
       const nombrePaciente = nombrePacienteBuscar.value.toLowerCase();
       const tabla = document.getElementById('listaPaciente');
 
@@ -90,6 +89,3 @@ agregarPacienteModal.addEventListener('click', function agregarPacienteModal() {
 })
 
 /*-------------------------------- Limpiar lista paciente --------------------------------------------------------*/
-function limpiarListaPaciente() {
-  enlistarPacientes();
-}
