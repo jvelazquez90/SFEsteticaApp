@@ -30,4 +30,5 @@
 
 .boton-filtro-eliminar {
     display: none;
+    float: right;
 }
