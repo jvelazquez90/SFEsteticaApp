@@ -50,33 +50,35 @@
                   <h4 class="modal-title">Agregar paciente</h4>
                 </div>
                 <div class="modal-body">
+                  <form action="" id="formularioAgregarPaciente">
                     <div class="container-fluid">
-                        <div class="row">
-                          <div class="col mb-1 p-1">
-                            <label for="nuevoPacienteAgregarNombre" class="form-label">Nombre</label>
-                            <input type="email" class="form-control" id="nuevoPacienteAgregarNombre" name="nuevoPacienteAgregarNombre">
-                          </div>
-                          <div class="col mb-1 p-1">
-                            <label for="nuevoPacienteAgregarApellido" class="form-label">Apellido</label>
-                            <input type="text" class="form-control" id="nuevoPacienteAgregarApellido" name="nuevoPacienteAgregarApellido">
-                          </div>
+                      <div class="row">
+                        <div class="col mb-1 p-1">
+                          <label for="nuevoPacienteAgregarNombre" class="form-label">Nombre</label>
+                          <input type="email" class="form-control" id="nuevoPacienteAgregarNombre" name="nuevoPacienteAgregarNombre">
                         </div>
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                          <div class="col mb-1 p-1">
-                            <label for="nuevoPacienteAgregarDNI" class="form-label">DNI</label>
-                            <input type="text" class="form-control" id="nuevoPacienteAgregarDNI" name="nuevoPacienteAgregarDNI">
-                          </div>
-                          <div class="col mb-1 p-1">
-                            <label for="nuevoPacienteAgregarTelefono" class="form-label">Teléfono</label>
-                            <input type="number" class="form-control" id="nuevoPacienteAgregarTelefono" name="nuevoPacienteAgregarTelefono">
-                          </div>
+                        <div class="col mb-1 p-1">
+                          <label for="nuevoPacienteAgregarApellido" class="form-label">Apellido</label>
+                          <input type="text" class="form-control" id="nuevoPacienteAgregarApellido" name="nuevoPacienteAgregarApellido">
                         </div>
                       </div>
+                    </div>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col mb-1 p-1">
+                          <label for="nuevoPacienteAgregarDNI" class="form-label">DNI</label>
+                          <input type="text" class="form-control" id="nuevoPacienteAgregarDNI" name="nuevoPacienteAgregarDNI">
+                        </div>
+                        <div class="col mb-1 p-1">
+                          <label for="nuevoPacienteAgregarTelefono" class="form-label">Teléfono</label>
+                          <input type="number" class="form-control" id="nuevoPacienteAgregarTelefono" name="nuevoPacienteAgregarTelefono">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Agregar</button>
+                  <button type="button" id="botonAgregarPacienteModal" class="btn btn-success" data-bs-dismiss="modal">Agregar</button>
                   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                 </div>
               </div>
@@ -92,10 +94,10 @@
                 </div>
                 <div class="modal-body">
                   <p>Ingrese Nombre: </p>
-                  <input type="text">
+                  <input type="text" id="nombrePacienteBuscar">
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Buscar</button>
+                  <button type="button" id="botonBuscarPacienteModal" class="btn btn-success" data-bs-dismiss="modal">Buscar</button>
                 </div>
               </div>
             </div>
