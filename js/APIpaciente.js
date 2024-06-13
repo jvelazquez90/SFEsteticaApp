@@ -26,10 +26,7 @@ function enlistarPacientes() {
 
 window.addEventListener('load', enlistarPacientes());
 
-/*-------------------------------- Buscar paciente --------------------------------------------------------*/
-var buscarPacienteModal = document.getElementById('botonBuscarPacienteModal');
-
-buscarPacienteModal.addEventListener('click', function buscarPaciente() {
+function buscarPaciente() {
   fetch(urlPaciente)
     .then(response => response.json())
     .then(data => {
@@ -54,13 +51,9 @@ buscarPacienteModal.addEventListener('click', function buscarPaciente() {
         }
       }
     })
-  }
-)
+};
 
-/*-------------------------------- Agregar paciente --------------------------------------------------------*/
-var agregarPacienteModal = document.getElementById('botonAgregarPacienteModal');
-
-agregarPacienteModal.addEventListener('click', function agregarPacienteModal() {
+function agregarPaciente() {
   const formulario = document.forms['formularioAgregarPaciente'];
   //console.log(agregarPacienteModal);
   const datos = [];
@@ -86,6 +79,16 @@ agregarPacienteModal.addEventListener('click', function agregarPacienteModal() {
       <td>F</td>
   `
   tabla.querySelector('tbody').appendChild(fila);
-})
+};
+
+/*-------------------------------- Buscar paciente --------------------------------------------------------*/
+var buscarPacienteModal = document.getElementById('botonBuscarPacienteModal');
+
+buscarPacienteModal.addEventListener('click', buscarPaciente);
+
+/*-------------------------------- Agregar paciente --------------------------------------------------------*/
+var agregarPacienteModal = document.getElementById('botonAgregarPacienteModal');
+
+agregarPacienteModal.addEventListener('click', agregarPaciente);
 
 /*-------------------------------- Limpiar lista paciente --------------------------------------------------------*/
