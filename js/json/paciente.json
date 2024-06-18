@@ -40,5 +40,12 @@
     "dni": "45002532",
     "telefono": "1145756214",
     "sexo": "F"
+  },
+  {
+    "id": "7",
+    "nombre": "Juan Carlos Perez",
+    "dni": "45002532",
+    "telefono": "1145756214",
+    "sexo": "M"
   }
 ]

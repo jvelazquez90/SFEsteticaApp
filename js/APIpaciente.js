@@ -26,11 +26,14 @@ function enlistarPacientes() {
 
 window.addEventListener('load', enlistarPacientes());
 
-function buscarPaciente() {
-  fetch(urlPaciente)
-    .then(response => response.json())
-    .then(data => {
+function APIbuscarPaciente(url){
+  return fetch(url)
+  .then(response => response.json());
+};
 
+function buscarPaciente() {
+  APIbuscarPaciente(urlPaciente)
+  .then(data => {
       const nombrePacienteBuscar = document.getElementById('nombrePacienteBuscar')
       const nombrePaciente = nombrePacienteBuscar.value.toLowerCase();
       const tabla = document.getElementById('listaPaciente');
@@ -50,7 +53,7 @@ function buscarPaciente() {
           tabla.querySelector('tbody').appendChild(fila);
         }
       }
-    })
+  })
 };
 
 function agregarPaciente() {
