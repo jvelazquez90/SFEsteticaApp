@@ -5,7 +5,7 @@ document.getElementById("inicioSesion").addEventListener("submit", function(even
   var password = document.getElementById("inputPassword").value;
 
   // Realizar la solicitud Fetch para obtener los datos del JSON
-  fetch("./js/json/usuarios.json")
+  fetch("http://localhost:8080/EsteticaBackend/usuario")
   .then(response => {
       if (!response.ok) {
           throw new Error("No se pudo cargar el archivo JSON.");
@@ -13,11 +13,11 @@ document.getElementById("inicioSesion").addEventListener("submit", function(even
       return response.json();
   })
   .then(data => {
-      var usuarios = data.usuarios;
+      var usuarios = data;
 
       // Validar el usuario y la contraseña
-      var usuarioValido = usuarios.find(function(usuario) {
-          return usuario.usuario === username && usuario.contrasena === password;
+      var usuarioValido = usuarios.find(function(user) {
+          return user.user === username && user.password === password;
       });
 
       if (usuarioValido) {
