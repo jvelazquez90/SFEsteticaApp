@@ -1,11 +1,9 @@
-//import {buscarPaciente} from "./APIpaciente.js";
-
 //----------------------- API Paciente ---------------------------------------------------------
-const urlPaciente = './js/json/agendaDelDia.json';
+const urlAgendaDelDia = './js/json/agendaDelDia.json';
 
 //----------------------- Agenda del dia ----------------------------------------------------
 function agendaDelDia(){
-  fetch(urlPaciente)
+  fetch(urlAgendaDelDia)
   .then(response => response.json())
   .then(data => {
     const tabla = document.getElementById('agendaDelDia');
@@ -24,6 +22,12 @@ function agendaDelDia(){
 };
 
 window.addEventListener('load', agendaDelDia);
+
+/*function mostrarBusqueda(url) {
+  APIbuscarPaciente(urlAgendaDelDia)
+  .then(response => response.json())
+  .then(data => console.log(data));
+}*/
 
   
   /*-------------------------------- Buscar paciente --------------------------------------------------------*/

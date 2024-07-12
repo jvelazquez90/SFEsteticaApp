@@ -38,20 +38,32 @@ function buscarPaciente() {
       const nombrePaciente = nombrePacienteBuscar.value.toLowerCase();
       const tabla = document.getElementById('listaPaciente');
 
-      for (k of data){
-        const nombre = k.nombre.toLowerCase();
-        if(nombrePaciente !== '' && nombre.includes(nombrePaciente)){
-          const fila = document.createElement('tr');
-          fila.innerHTML = `
-            <td>${k.id}</td>
-            <td>${k.nombre}</td>
-            <td>${k.dni}</td>
-            <td>${k.telefono}</td>
-            <td>${k.sexo}</td>
-          `;
-          document.getElementById("listaPaciente").querySelector("tbody").innerHTML="";
-          tabla.querySelector('tbody').appendChild(fila);
+      const listaPacienteABuscar = [];
+      
+      if(nombrePaciente == ''){
+        return;
+      }else {
+        for (k of data){
+          const nombre = k.nombre.toLowerCase();
+          if(nombre.includes(nombrePaciente)){
+            listaPacienteABuscar.push(k);
+          }
         }
+      };
+      
+
+      document.getElementById("listaPaciente").querySelector("tbody").innerHTML="";
+      
+      for (paciente of listaPacienteABuscar){
+        const fila = document.createElement('tr');
+          fila.innerHTML = `
+            <td>${paciente.id}</td>
+            <td>${paciente.nombre}</td>
+            <td>${paciente.dni}</td>
+            <td>${paciente.telefono}</td>
+            <td>${paciente.sexo}</td>
+          `;
+          tabla.querySelector('tbody').appendChild(fila);
       }
   })
 };
