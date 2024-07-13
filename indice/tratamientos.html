@@ -52,20 +52,25 @@
                   <h4 class="modal-title">Agregar Tratamiento</h4>
                 </div>
                 <div class="modal-body">
-                  <label for="agregarTratamientoNombre" class="form-label">Nombre del tratamiento</label>
-                  <input type="text" class="form-control" id="agregarTratamientoNombre" name="agregarTratamientoNombre">
+                  <form action="" id="formularioAgregarTratamiento">
+                    <label for="agregarTratamientoNombre" class="form-label">Nombre del tratamiento</label>
+                    <input type="text" class="form-control" id="agregarTratamientoNombre" name="agregarTratamientoNombre">
 
-                  <label for="agregarTramientoDuracion" class="form-label">Duración</label>
-                  <input type="text" class="form-control" id="agregarTramientoDuracion" name="agregarTramientoDuracion">
+                    <label for="agregarTratamientoSesiones" class="form-label">Cantidad de Sesiones</label>
+                    <input type="number" class="form-control" id="agregarTratamientoSesiones" name="agregarTratamientoSesiones">
 
-                  <label for="agregarTratamientoSesiones" class="form-label">Cantidad de Sesiones</label>
-                  <input type="number" class="form-control" id="agregarTratamientoSesiones" name="agregarTratamientoSesiones">
+                    <label for="agregarTramientoDuracion" class="form-label">Duración</label>
+                    <input type="text" class="form-control" id="agregarTramientoDuracion" name="agregarTramientoDuracion">
 
-                  <label for="agregarTramientoPrecio" class="form-label">Precio</label>
-                  <input type="number" class="form-control" id="agregarTramientoPrecio" name="agregarTramientoPrecio">
+                    <label for="agregarTramientoTiempoSuperpuesto" class="form-label">Superposición</label>
+                    <input type="text" class="form-control" id="agregarTramientoTiempoSuperpuesto" name="agregarTramientoTiempoSuperpuesto">
+
+                    <label for="agregarTramientoPrecio" class="form-label">Precio</label>
+                    <input type="number" class="form-control" id="agregarTramientoPrecio" name="agregarTramientoPrecio">
+                  </form>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Agregar</button>
+                  <button type="button" id="botonAgregarTratamientoModal" class="btn btn-success" data-bs-dismiss="modal">Agregar</button>
                   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
                 </div>
               </div>
@@ -81,10 +86,10 @@
                 </div>
                 <div class="modal-body">
                   <p>Nombre: </p>
-                  <input type="text">
+                  <input type="text" id="nombreTratamientoBuscar">
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Buscar</button>
+                  <button type="button" id="botonBuscarTratamientoModal" class="btn btn-success" data-bs-dismiss="modal">Buscar</button>
                 </div>
               </div>
             </div>
