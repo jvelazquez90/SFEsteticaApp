@@ -67,22 +67,19 @@ function buscarTratamiento() {
   })
 };
 
-
 function agregarTratamiento() {
 
   var formulario = document.getElementById('formularioAgregarTratamiento');
 
-  if(formulario[0].value != ''){
-    const obj = {
-      "nombre": formulario[0].value,
-      "cantidadSesiones": parseInt(formulario[1].value),
-      "tiempo": formulario[2].value,
-      "tiempoSuperpuesto": formulario[3].value,
-      "precio": parseInt(formulario[4].value)
-    }
-  } else{
-    document.getElementById('alerta').style.display = 'block';
-  }
+  console.log(formulario);
+
+  const obj = {
+    "nombre": formulario[0].value,
+    "cantidadSesiones": parseInt(formulario[1].value),
+    "tiempo": formulario[2].value,
+    "tiempoSuperpuesto": formulario[3].value,
+    "precio": parseInt(formulario[4].value)
+  };
 
 	fetch(urlTratamiento, {
       method: "POST",
@@ -99,17 +96,18 @@ function limpiarLista(){
   location.reload();
 }
 
-/*-------------------------------- Buscar tratamiento --------------------------------------------------------*/
+
+/*-------------------------------- Buscar paciente --------------------------------------------------------*/
 var buscarTratamientoModal = document.getElementById('botonBuscarTratamientoModal');
 
 buscarTratamientoModal.addEventListener('click', buscarTratamiento);
 
-/*-------------------------------- Agregar tratamiento --------------------------------------------------------*/
+/*-------------------------------- Agregar paciente --------------------------------------------------------*/
 var agregarTratamientoModal = document.getElementById('botonAgregarTratamientoModal');
 
 agregarTratamientoModal.addEventListener('click', agregarTratamiento);
 
-/*-------------------------------- Limpiar lista tratamiento --------------------------------------------------------*/
+/*-------------------------------- Limpiar lista paciente --------------------------------------------------------*/
 var limpiarListaTratamiento = document.getElementById('limpiarListaTratamiento');
 
 limpiarListaTratamiento.addEventListener('click', limpiarLista);
