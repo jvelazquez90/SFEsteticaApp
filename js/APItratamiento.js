@@ -68,33 +68,32 @@ function buscarTratamiento() {
 };
 
 function agregarTratamiento() {
-  const formulario = document.forms['formularioAgregarTratamiento'];
-  //console.log(agregarTratamientoModal);
-  const datos = [];
 
-  for (let elemento of formulario) {
-    datos.push(elemento.value);
-  }
-  const nombre = datos[0];
-  const cantidadSesiones = datos[1];
-  const tiempo = datos[2];
-  const superposicion = datos[3];
-  const precio = datos[4];
-
-  //console.log(nombre);
+  var formulario = document.getElementById('formularioAgregarTratamiento');
   
-  const tabla = document.getElementById('listaTratamiento');
+   const obj = {
+    "nombre": formulario[0].value,
+    "cantidadSesiones": parseInt(formulario[1].value),
+    "tiempo": formulario[2].value,
+    "tiempoSuperpuesto": formulario[3].value,
+    "precio": parseInt(formulario[4].value)
+   }
 
-  const fila = document.createElement('tr');
-  fila.innerHTML = `
-      <td>${7}</td>
-      <td>${datos[0] + ' ' + datos[1]}</td>
-      <td>${datos[2]}</td>
-      <td>${datos[3]}</td>
-      <td>F</td>
-  `
-  tabla.querySelector('tbody').appendChild(fila);
+
+	console.log(obj);	
+   
+	 
+	fetch(urlTratamiento, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(obj),
+	});
+
+  location.reload();
 };
+
 
 /*-------------------------------- Buscar paciente --------------------------------------------------------*/
 var buscarTratamientoModal = document.getElementById('botonBuscarTratamientoModal');
