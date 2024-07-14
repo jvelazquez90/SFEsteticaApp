@@ -82,7 +82,7 @@ function agregarTratamiento() {
 	fetch(urlTratamiento, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(obj),
 	});
@@ -90,15 +90,21 @@ function agregarTratamiento() {
   location.reload();
 };
 
+function limpiarLista(){
+  location.reload();
+}
 
-/*-------------------------------- Buscar paciente --------------------------------------------------------*/
+/*-------------------------------- Buscar tratamiento --------------------------------------------------------*/
 var buscarTratamientoModal = document.getElementById('botonBuscarTratamientoModal');
 
 buscarTratamientoModal.addEventListener('click', buscarTratamiento);
 
-/*-------------------------------- Agregar paciente --------------------------------------------------------*/
+/*-------------------------------- Agregar tratamiento --------------------------------------------------------*/
 var agregarTratamientoModal = document.getElementById('botonAgregarTratamientoModal');
 
 agregarTratamientoModal.addEventListener('click', agregarTratamiento);
 
-/*-------------------------------- Limpiar lista paciente --------------------------------------------------------*/
+/*-------------------------------- Limpiar lista tratamiento --------------------------------------------------------*/
+var limpiarListaTratamiento = document.getElementById('limpiarListaTratamiento');
+
+limpiarListaTratamiento.addEventListener('click', limpiarLista);
