@@ -67,18 +67,23 @@ function buscarTratamiento() {
   })
 };
 
+
 function agregarTratamiento() {
 
   var formulario = document.getElementById('formularioAgregarTratamiento');
-  
-  const obj = {
-    "nombre": formulario[0].value,
-    "cantidadSesiones": parseInt(formulario[1].value),
-    "tiempo": formulario[2].value,
-    "tiempoSuperpuesto": formulario[3].value,
-    "precio": parseInt(formulario[4].value)
+
+  if(formulario[0].value != ''){
+    const obj = {
+      "nombre": formulario[0].value,
+      "cantidadSesiones": parseInt(formulario[1].value),
+      "tiempo": formulario[2].value,
+      "tiempoSuperpuesto": formulario[3].value,
+      "precio": parseInt(formulario[4].value)
+    }
+  } else{
+    document.getElementById('alerta').style.display = 'block';
   }
-   
+
 	fetch(urlTratamiento, {
       method: "POST",
       headers: {
