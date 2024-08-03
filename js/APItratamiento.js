@@ -9,6 +9,7 @@ function enlistarTratamientos(){
 
     data.forEach(element => {
       const fila = document.createElement('tr');
+      fila.className = 'item';
       fila.innerHTML = `
         <td>${element.idTratamiento}</td>
         <td>${element.nombre}</td>
@@ -95,19 +96,40 @@ function agregarTratamiento() {
 function limpiarLista(){
   location.reload();
 }
-
-
-/*-------------------------------- Buscar paciente --------------------------------------------------------*/
+/*-------------------------------- Buscar tratamiento --------------------------------------------------------*/
 var buscarTratamientoModal = document.getElementById('botonBuscarTratamientoModal');
 
 buscarTratamientoModal.addEventListener('click', buscarTratamiento);
 
-/*-------------------------------- Agregar paciente --------------------------------------------------------*/
+/*-------------------------------- Agregar tratamiento --------------------------------------------------------*/
 var agregarTratamientoModal = document.getElementById('botonAgregarTratamientoModal');
 
 agregarTratamientoModal.addEventListener('click', agregarTratamiento);
 
-/*-------------------------------- Limpiar lista paciente --------------------------------------------------------*/
+/*-------------------------------- Limpiar lista tratamiento --------------------------------------------------------*/
 var limpiarListaTratamiento = document.getElementById('limpiarListaTratamiento');
 
 limpiarListaTratamiento.addEventListener('click', limpiarLista);
+
+/*-------------------------------- Editar tratamiento --------------------------------------------------------*/
+document.addEventListener('DOMContentLoaded', () => {
+  const tratamientos = document.getElementById('listaTratamiento');
+
+  tratamientos.addEventListener('click', (event) => {
+    // event.target obtiene el elemento especifico dentro de la tabla que fue clickeada.
+    // tagName verifica si el click sobre un td
+    if(event.target.tagName === 'TD'){
+
+      // obtiene la fila clickeada
+      const row = event.target.closest('tr');
+
+      // obtiene todo las celdas de la fila
+      const celdas = row.getElementsByTagName('td');
+
+      // accedo a cada elemento de la fila
+      const id = celdas[0];
+
+      console.log(id);
+    }
+  })
+})
