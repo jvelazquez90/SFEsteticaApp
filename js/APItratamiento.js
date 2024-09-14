@@ -22,12 +22,8 @@ function enlistarTratamientos(){
         <td>${element.cantidadSesiones}</td>
         <td>${element.precio}</td>
         <td>
-          <button type="button" class="btn btn-primary">
-            <img src="../img/edit.png" style="width:20px;height:20px;" alt="Editar">
-          </button>
-          <button type="button" class="btn btn-danger">
-            <img src="../img/delete.png" style="width:20px;height:20;" alt="Eliminar">
-          </button> 
+          <a href="#"> <img src="../img/edit.png" alt="edit" width="25" height="25"></a>
+          <a href="#"> <img src="../img/delete.png" alt="delete" width="25" height="25"></a>
         </td>
       `;
       tabla.querySelector('tbody').appendChild(fila);
