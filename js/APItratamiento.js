@@ -17,11 +17,18 @@ function enlistarTratamientos(){
       const fila = document.createElement('tr');
       fila.className = 'item';
       fila.innerHTML = `
-        <td>${element.idTratamiento}</td>
         <td>${element.nombre}</td>
         <td>${element.tiempo}</td>
         <td>${element.cantidadSesiones}</td>
         <td>${element.precio}</td>
+        <td>
+          <button type="button" class="btn btn-primary">
+            <img src="../img/edit.png" style="width:20px;height:20px;" alt="Editar">
+          </button>
+          <button type="button" class="btn btn-danger">
+            <img src="../img/delete.png" style="width:20px;height:20;" alt="Eliminar">
+          </button> 
+        </td>
       `;
       tabla.querySelector('tbody').appendChild(fila);
     });
