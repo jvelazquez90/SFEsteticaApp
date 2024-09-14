@@ -17,11 +17,14 @@ function enlistarTratamientos(){
       const fila = document.createElement('tr');
       fila.className = 'item';
       fila.innerHTML = `
-        <td>${element.idTratamiento}</td>
         <td>${element.nombre}</td>
         <td>${element.tiempo}</td>
         <td>${element.cantidadSesiones}</td>
         <td>${element.precio}</td>
+        <td>
+          <a href="#"> <img src="../img/edit.png" alt="edit" width="25" height="25"></a>
+          <a href="#"> <img src="../img/delete.png" alt="delete" width="25" height="25"></a>
+        </td>
       `;
       tabla.querySelector('tbody').appendChild(fila);
     });

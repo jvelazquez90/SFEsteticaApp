@@ -36,3 +36,8 @@
 .quieto {
     position: fixed;
 }
+
+.icon_edit_delete {
+    width: 5px;
+    height: 5px;
+}
