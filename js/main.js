@@ -5,7 +5,7 @@ document.getElementById("inicioSesion").addEventListener("submit", function(even
   var password = document.getElementById("inputPassword").value;
 
   // Realizar la solicitud Fetch para obtener los datos del JSON
-  fetch("http://localhost:8080/EsteticaBackend/usuario")
+  fetch("http://localhost:8080/estetica/usuario/get")
   .then(response => {
       if (!response.ok) {
           throw new Error("No se pudo cargar el archivo JSON.");

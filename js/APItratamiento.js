@@ -1,8 +1,14 @@
 //----------------------- Tratamiento ---------------------------------------------------------
-const urlTratamiento = 'http://localhost:8080/EsteticaBackend/tratamiento';
+const urlTratamiento = 'http://localhost:8080/estetica/tratamiento/';
+var enlistar = "get";
+var agregar = "create";
+
+function limpiarLista(){
+  location.reload();
+}
 
 function enlistarTratamientos(){
-  fetch(urlTratamiento)
+  fetch(urlTratamiento + enlistar)
   .then(response => response.json())
   .then(data => {
     const tabla = document.getElementById('listaTratamiento');
@@ -27,7 +33,7 @@ window.addEventListener('load', enlistarTratamientos());
 
 /* ------------------------------------------------------------------------------------------------------------- */
 function APIbuscarTratamiento(url){
-  return fetch(url)
+  return fetch(url + enlistar)
   .then(response => response.json());
 };
 
@@ -72,8 +78,6 @@ function agregarTratamiento() {
 
   var formulario = document.getElementById('formularioAgregarTratamiento');
 
-  console.log(formulario);
-
   const obj = {
     "nombre": formulario[0].value,
     "cantidadSesiones": parseInt(formulario[1].value),
@@ -82,7 +86,9 @@ function agregarTratamiento() {
     "precio": parseInt(formulario[4].value)
   };
 
-	fetch(urlTratamiento, {
+  let urlAgregar = urlTratamiento + agregar;
+  
+	fetch(urlAgregar, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -90,12 +96,9 @@ function agregarTratamiento() {
       body: JSON.stringify(obj),
 	});
 
-  location.reload();
+  //location.reload();
+  limpiarLista();
 };
-
-function limpiarLista(){
-  location.reload();
-}
 /*-------------------------------- Buscar tratamiento --------------------------------------------------------*/
 var buscarTratamientoModal = document.getElementById('botonBuscarTratamientoModal');
 
